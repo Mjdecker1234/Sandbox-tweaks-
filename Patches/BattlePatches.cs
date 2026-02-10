@@ -1,6 +1,7 @@
 using HarmonyLib;
 using TaleWorlds.CampaignSystem.GameComponents;
 using TaleWorlds.Core;
+using TaleWorlds.Library;
 using SandboxTweaks.Settings;
 
 namespace SandboxTweaks.Patches
@@ -43,4 +44,51 @@ namespace SandboxTweaks.Patches
             }
         }
     }
+
+    [HarmonyPatch(typeof(DefaultBattleMoraleModel), "GetEffectiveInitialMorale")]
+    public class BattleMoralePatch
+    {
+        static void Postfix(ref float __result)
+        {
+            var settings = SandboxTweaksSettings.Instance;
+            if (settings?.EnableBattleTweaks == true)
+            {
+                __result *= settings.BattleMoraleMultiplier;
+            }
+        }
+    }
+
+    // Battle size patch
+    [HarmonyPatch]
+    public class BattleSizePatch
+    {
+        static bool Prepare()
+        {
+            return SandboxTweaksSettings.Instance?.EnableBattleTweaks == true;
+        }
+
+        [HarmonyPatch(typeof(BannerlordConfig), "BattleSize", MethodType.Getter)]
+        [HarmonyPostfix]
+        static void BattleSizeGetter(ref int __result)
+        {
+            var settings = SandboxTweaksSettings.Instance;
+            if (settings?.EnableBattleTweaks == true)
+            {
+                __result = settings.BattleSize;
+            }
+        }
+
+        [HarmonyPatch(typeof(BannerlordConfig), "BattleSize", MethodType.Setter)]
+        [HarmonyPrefix]
+        static bool BattleSizeSetter(ref int value)
+        {
+            var settings = SandboxTweaksSettings.Instance;
+            if (settings?.EnableBattleTweaks == true)
+            {
+                value = settings.BattleSize;
+            }
+            return true;
+        }
+    }
 }
+
