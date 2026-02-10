@@ -238,32 +238,53 @@ This document provides a comprehensive list of all features implemented in Sandb
 
 ## 12. Naval Combat Tweaks (WarSail DLC)
 **Enable/Disable Toggle**: Yes  
-**Description**: Modify naval warfare mechanics (requires WarSail DLC)
+**Description**: Modify naval warfare mechanics (requires WarSail DLC)  
+**⚠️ STATUS**: Settings exposed, implementation pending WarSail DLC API documentation
 
 ### Settings
+All naval settings are available in MCM menu but patches are placeholders pending WarSail DLC class discovery:
+
 - **Ship Speed Multiplier** (0.1x-10x): Multiplier for ship movement
   - Default: 1.0x
+  - Status: Placeholder
 - **Naval Battle Size Multiplier** (0.1x-5x): Number of ships in naval battles
   - Default: 1.0x
+  - Status: Placeholder
 - **Ship Durability Multiplier** (0.1x-10x): Ship hull strength
   - Default: 1.0x
+  - Status: Placeholder
 - **Naval XP Multiplier** (0.1x-10x): XP from naval skills
   - Default: 1.0x
+  - Status: Placeholder
 - **Fleet Size Limit** (1-100): Maximum ships in fleet
   - Default: 20
+  - Status: Placeholder
 - **Ship Cost Multiplier** (0.1x-10x): Ship purchase/maintenance costs
   - Default: 1.0x
+  - Status: Placeholder
 - **Enable Port Blockade Tweaks** (Yes/No): Enable port siege modifications
   - Default: No
+  - Status: Placeholder
 - **Port Trade Bonus Multiplier** (0.1x-10x): Trade bonuses at ports
   - Default: 1.0x
+  - Status: Placeholder
 - **Nord Faction Troop Multiplier** (0.1x-10x): Nord troop strength
   - Default: 1.0x
+  - Status: Placeholder
 
 ### Implementation
-- Naval patches are currently placeholders
-- Will be fully implemented when WarSail DLC classes are documented
-- Safe to configure even without DLC installed
+- Infrastructure is in place with `NavalPatches.cs`
+- Settings are fully integrated in MCM menu
+- Actual patches will be implemented when WarSail DLC APIs are documented
+- Safe to configure settings even without DLC
+- Framework ready for future implementation
+
+### Note for Developers
+When WarSail DLC is released and its classes are reverse-engineered:
+1. Update `NavalPatches.cs` with actual class names
+2. Implement Harmony patches using the settings already defined
+3. Add DLC detection logic
+4. Test thoroughly with DLC installed
 
 ---
 

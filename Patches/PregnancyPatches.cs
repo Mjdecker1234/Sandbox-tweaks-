@@ -50,16 +50,15 @@ namespace SandboxTweaks.Patches
         }
     }
 
-    [HarmonyPatch(typeof(DefaultPregnancyModel), "GetDailyChanceOfPregnancyForHero")]
-    public class PregnancyTwinChancePatch
-    {
-        static void Postfix(ref float __result, Hero hero)
-        {
-            var settings = SandboxTweaksSettings.Instance;
-            if (settings?.EnablePregnancyTweaks == true)
-            {
-                // Apply twin chance modifier if needed
-            }
-        }
-    }
+    // NOTE: Twin chance and female offspring chance are not directly patchable
+    // through simple property patches in DefaultPregnancyModel.
+    // These would require more complex patches to the pregnancy calculation logic
+    // or birth event handlers. Implementation requires deeper game code analysis.
+    
+    // Placeholder for future twin chance implementation:
+    // Would need to patch the actual birth event to generate twins based on TwinChance setting
+    
+    // Placeholder for female offspring implementation:
+    // Would need to patch gender determination logic to use FemaleOffspringChance setting
 }
+

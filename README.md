@@ -72,7 +72,7 @@ This mod is inspired by and includes all features from **Kaoses Tweaks** (Nexus 
 - Individual skill tweaking
 
 ### Naval Combat Tweaks (WarSail DLC)
-**New features for WarSail DLC owners:**
+**⚠️ Note: Settings available, full implementation pending WarSail DLC API documentation**
 - Ship speed multipliers
 - Naval battle size adjustments
 - Ship durability modifications
@@ -82,6 +82,8 @@ This mod is inspired by and includes all features from **Kaoses Tweaks** (Nexus 
 - Port blockade mechanics tweaks
 - Port trade bonus multipliers
 - Nord faction troop strength adjustments
+
+*Infrastructure and settings are ready; actual patches will be implemented when WarSail DLC classes are reverse-engineered.*
 
 ### Other Features
 - Auto-lock equipped items to prevent accidental selling

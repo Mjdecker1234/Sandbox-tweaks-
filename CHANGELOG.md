@@ -21,11 +21,12 @@ All notable changes to the Sandbox Tweaks mod will be documented in this file.
   - Other Features: Auto-lock items
 
 ### Added - WarSail DLC Features
-- Naval Combat Tweaks: Ship speed, battle size, and durability multipliers
-- Fleet Management: Fleet size limits and ship cost multipliers
-- Naval Skills: Naval XP multipliers for navigation and seafaring
-- Port Mechanics: Trade bonus and blockade system tweaks
-- Nord Faction: Troop strength multipliers for Nord units
+- Naval Combat Tweaks: Ship speed, battle size, and durability multipliers (settings ready, patches pending)
+- Fleet Management: Fleet size limits and ship cost multipliers (settings ready, patches pending)
+- Naval Skills: Naval XP multipliers for navigation and seafaring (settings ready, patches pending)
+- Port Mechanics: Trade bonus and blockade system tweaks (settings ready, patches pending)
+- Nord Faction: Troop strength multipliers for Nord units (settings ready, patches pending)
+- **Note**: All WarSail settings are exposed in MCM; actual implementation will follow once DLC APIs are documented
 
 ### Technical
 - Full MCM (Mod Configuration Menu) integration
@@ -62,7 +63,8 @@ All notable changes to the Sandbox Tweaks mod will be documented in this file.
 - Enhanced compatibility with popular mods
 
 ### Known Issues
-- Naval patches are placeholders pending WarSail DLC class discovery
+- Naval patches are placeholders pending WarSail DLC class discovery (settings are functional but patches not yet applied)
+- Pregnancy twin chance and female offspring settings are exposed but require complex birth event patching (pending implementation)
 - Some damage multiplier patches may not apply to all combat scenarios
 - Battle size changes may require game restart to fully apply
 
