@@ -6,6 +6,11 @@
     <Platforms>x64</Platforms>
     <LangVersion>10.0</LangVersion>
     <Nullable>enable</Nullable>
+    <!-- Output Configuration -->
+    <AssemblyName>SandboxTweaks</AssemblyName>
+    <OutputPath>bin\Win64_Shipping_Client\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -14,8 +19,13 @@
     <GameFolder Condition="!Exists('$(GameFolder)')">C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord</GameFolder>
   </PropertyGroup>
 
-  <ItemGroup>
-    <!-- Game References -->
+  <!-- CI-friendly configuration to handle missing game references -->
+  <PropertyGroup Condition="'$(CI)' == 'true'">
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+  </PropertyGroup>
+
+  <!-- Game References - Only included when game folder exists -->
+  <ItemGroup Condition="Exists('$(GameFolder)')">
     <Reference Include="$(GameFolder)\bin\Win64_Shipping_Client\TaleWorlds*.dll" Exclude="$(GameFolder)\bin\Win64_Shipping_Client\TaleWorlds.Native.dll">
       <HintPath>%(Identity)</HintPath>
       <Private>False</Private>
@@ -42,6 +52,8 @@
     <!-- Mod Dependencies -->
     <PackageReference Include="Bannerlord.MCM" Version="5.9.1" IncludeAssets="compile" />
     <PackageReference Include="Lib.Harmony" Version="2.2.2" IncludeAssets="compile" />
+    <!-- Reference assemblies for CI builds without game installation -->
+    <PackageReference Include="Bannerlord.ReferenceAssemblies" Version="*" IncludeAssets="compile" Condition="!Exists('$(GameFolder)')" />
   </ItemGroup>
 
 </Project>
