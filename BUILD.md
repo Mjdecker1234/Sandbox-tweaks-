@@ -234,19 +234,24 @@ After building:
 
 ---
 
-## Continuous Integration (Optional)
+## Continuous Integration
 
-For automated builds, consider setting up:
-- GitHub Actions
-- Azure DevOps
-- Jenkins
+This repository includes a GitHub Actions workflow (`.github/workflows/build.yml`) that:
+1. Checks out code
+2. Restores NuGet packages (including Bannerlord.ReferenceAssemblies)
+3. Builds the project in Release configuration
+4. Packages the mod structure
+5. Creates release artifacts
 
-Example GitHub Actions workflow would:
-1. Check out code
-2. Restore NuGet packages
-3. Build project
-4. Run tests (if added)
-5. Create release artifacts
+### CI Build Limitations
+
+The CI build uses `Bannerlord.ReferenceAssemblies` NuGet package, which provides metadata-only versions of the game DLLs. This allows compilation without a full game installation, but:
+
+- **Version Mismatches**: Reference assemblies may not exactly match your target game version
+- **Namespace Changes**: Game API namespaces may differ between versions
+- **Build Warnings**: Some errors/warnings are expected and don't indicate problems with the project structure
+
+**For production builds**, always build locally with the actual game installed. See `CI_BUILD_NOTES.md` for detailed information about CI builds and their limitations.
 
 ---
 
