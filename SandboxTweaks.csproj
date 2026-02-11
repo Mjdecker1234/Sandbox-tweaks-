@@ -52,6 +52,8 @@
     <!-- Mod Dependencies -->
     <PackageReference Include="Bannerlord.MCM" Version="5.9.1" IncludeAssets="compile" />
     <PackageReference Include="Lib.Harmony" Version="2.2.2" IncludeAssets="compile" />
+    <!-- Reference assemblies for CI builds without game installation -->
+    <PackageReference Include="Bannerlord.ReferenceAssemblies" Version="*" IncludeAssets="compile" Condition="!Exists('$(GameFolder)')" />
   </ItemGroup>
 
 </Project>
