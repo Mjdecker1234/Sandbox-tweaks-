@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "tOqbHpXSxLY=",
+  "success": true,
+  "projectFilePath": "D:\\Downloads\\Sandbox-tweaks--main\\Sandbox-tweaks--main\\SandboxTweaks.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Michael\\.nuget\\packages\\bannerlord.lib.harmony\\2.2.2\\bannerlord.lib.harmony.2.2.2.nupkg.sha512",
+    "C:\\Users\\Michael\\.nuget\\packages\\bannerlord.mcm\\5.9.1\\bannerlord.mcm.5.9.1.nupkg.sha512",
+    "C:\\Users\\Michael\\.nuget\\packages\\lib.harmony\\2.2.2\\lib.harmony.2.2.2.nupkg.sha512",
+    "C:\\Users\\Michael\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "C:\\Users\\Michael\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net472\\1.0.3\\microsoft.netframework.referenceassemblies.net472.1.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

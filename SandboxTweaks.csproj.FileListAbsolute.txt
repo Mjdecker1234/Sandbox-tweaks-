@@ -1,0 +1,9 @@
+D:\Downloads\Sandbox-tweaks--main\Sandbox-tweaks--main\obj\Release\SandboxTweaks.csproj.AssemblyReference.cache
+D:\Downloads\Sandbox-tweaks--main\Sandbox-tweaks--main\obj\Release\SandboxTweaks.GeneratedMSBuildEditorConfig.editorconfig
+D:\Downloads\Sandbox-tweaks--main\Sandbox-tweaks--main\obj\Release\SandboxTweaks.AssemblyInfoInputs.cache
+D:\Downloads\Sandbox-tweaks--main\Sandbox-tweaks--main\obj\Release\SandboxTweaks.AssemblyInfo.cs
+D:\Downloads\Sandbox-tweaks--main\Sandbox-tweaks--main\obj\Release\SandboxTweaks.csproj.CoreCompileInputs.cache
+D:\Downloads\Sandbox-tweaks--main\Sandbox-tweaks--main\bin\Win64_Shipping_Client\SandboxTweaks.dll
+D:\Downloads\Sandbox-tweaks--main\Sandbox-tweaks--main\bin\Win64_Shipping_Client\SandboxTweaks.pdb
+D:\Downloads\Sandbox-tweaks--main\Sandbox-tweaks--main\obj\Release\SandboxTweaks.dll
+D:\Downloads\Sandbox-tweaks--main\Sandbox-tweaks--main\obj\Release\SandboxTweaks.pdb
