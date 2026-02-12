@@ -1,0 +1,69 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Downloads\\Sandbox-tweaks--main\\Sandbox-tweaks--main\\SandboxTweaks.csproj": {}
+  },
+  "projects": {
+    "D:\\Downloads\\Sandbox-tweaks--main\\Sandbox-tweaks--main\\SandboxTweaks.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Downloads\\Sandbox-tweaks--main\\Sandbox-tweaks--main\\SandboxTweaks.csproj",
+        "projectName": "SandboxTweaks",
+        "projectPath": "D:\\Downloads\\Sandbox-tweaks--main\\Sandbox-tweaks--main\\SandboxTweaks.csproj",
+        "packagesPath": "C:\\Users\\Michael\\.nuget\\packages\\",
+        "outputPath": "D:\\Downloads\\Sandbox-tweaks--main\\Sandbox-tweaks--main\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Michael\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "dependencies": {
+            "Bannerlord.MCM": {
+              "include": "Compile",
+              "target": "Package",
+              "version": "[5.9.1, )"
+            },
+            "Lib.Harmony": {
+              "include": "Compile",
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

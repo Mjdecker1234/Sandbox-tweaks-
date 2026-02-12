@@ -26,24 +26,14 @@
 
   <!-- Game References - Only included when game folder exists -->
   <ItemGroup Condition="Exists('$(GameFolder)')">
-    <Reference Include="$(GameFolder)\bin\Win64_Shipping_Client\TaleWorlds*.dll" Exclude="$(GameFolder)\bin\Win64_Shipping_Client\TaleWorlds.Native.dll">
-      <HintPath>%(Identity)</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="$(GameFolder)\Modules\Native\bin\Win64_Shipping_Client\*.dll">
-      <HintPath>%(Identity)</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="$(GameFolder)\Modules\SandBox\bin\Win64_Shipping_Client\*.dll">
-      <HintPath>%(Identity)</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="$(GameFolder)\Modules\SandBoxCore\bin\Win64_Shipping_Client\*.dll">
-      <HintPath>%(Identity)</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="$(GameFolder)\Modules\StoryMode\bin\Win64_Shipping_Client\*.dll">
-      <HintPath>%(Identity)</HintPath>
+    <GameAssemblies Include="$(GameFolder)\bin\Win64_Shipping_Client\TaleWorlds*.dll" />
+    <GameAssemblies Include="$(GameFolder)\Modules\Native\bin\Win64_Shipping_Client\*.dll" />
+    <GameAssemblies Include="$(GameFolder)\Modules\SandBox\bin\Win64_Shipping_Client\*.dll" />
+    <GameAssemblies Include="$(GameFolder)\Modules\SandBoxCore\bin\Win64_Shipping_Client\*.dll" />
+    <GameAssemblies Include="$(GameFolder)\Modules\StoryMode\bin\Win64_Shipping_Client\*.dll" />
+    <GameAssemblies Remove="$(GameFolder)\bin\Win64_Shipping_Client\TaleWorlds.Native.dll" />
+
+    <Reference Include="@(GameAssemblies)">
       <Private>False</Private>
     </Reference>
   </ItemGroup>
